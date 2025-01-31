@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* @font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/Library/custom/fonts/Inter/InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/Library/custom/fonts/Inter/InterVariable-Italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/Library/custom/fonts/JetBrainsMono/JetBrainsMonoNerdFontMono-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/Library/custom/fonts/JetBrainsMono/JetBrainsMonoNerdFontMono-Italic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/Library/custom/fonts/JetBrainsMono/JetBrainsMonoNerdFontMono-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/Library/custom/fonts/JetBrainsMono/JetBrainsMonoNerdFontMono-BoldItalic.ttf")
+    format("truetype");
+} */
+
+html {
+  --background-primary: #282a36;
+  --background-primary-alt: #44475a;
+  --background-secondary: #21222c;
+  --background-secondary-alt: #282a36;
+  --text-normal: #f8f8f2;
+  --text-title-h1: #bd93f9;
+  --text-title-h2: #ffb86c;
+  --text-title-h3: #50fa7b;
+  --text-title-h4: #ff5555;
+  --text-title-h5: #f1fa8c;
+  --text-title-h6: #bd93f4;
+  --text-link: #8be9fd;
+  --markup-code: #ffb86c;
+  --text-tag: #50fa7b;
+  --text-a: #ff79c6;
+  --text-a-hover: #ff79c0;
+  --text-mark: #f1fa8c;
+  --interactive-accent: #50fa7b;
+  --blockquote-border: #b294bb;
+  --interactive-accent-rgb: #f1fa8c;
+  --black: #000000;
+  --blue: #bd93f9;
+  --red: #ff5555;
+  --green: #50fa7b;
+  --yellow: #f1fa8c;
+  --magenta: #ff79c6;
+  --cyan: #8be9fd;
+  --white: #bfbfbf;
+  --lightBlack: #4d4d4d;
+  --lightWhite: #e6e6e6;
+  --lightBlue: #caa9fa;
+  --lightRed: #ff6e67;
+  --lightGreen: #5af78e;
+  --lightYellow: #f4f99d;
+  --lightMagenta: #ff92d0;
+  --lightCyan: #9aedfe;
+  --subtext0: #a6adc8;
+  --subtext1: #bac2de;
+  --overlay1: #7f849c;
+  --surface0: #313244;
+  --surface1: #45475a;
+
+  --root-background-color: var(--background-secondary-alt);
+  --root-color: var(--text-normal);
+
+  --ui-accent-color: var(--blue);
+  --highlight-color: color-mix(in srgb, var(--yellow), transparent 80%);
+  --link-color: var(--text-link);
+  --link-missing-color: var(--text-a);
+  --meta-color: inherit;
+  --meta-subtle-color: var(--subtext0);
+  --subtle-color: var(--subtext1);
+  --subtle-background-color: color-mix(
+    in srgb,
+    var(--surface1),
+    transparent 80%
+  );
+
+  --top-color: var(--subtext0);
+  --top-background-color: var(--background-secondary);
+  --top-border-color: var(--surface0);
+  --top-sync-error-color: var(--red);
+  --top-sync-error-background-color: var(--background-primary);
+  --top-saved-color: var(--subtext0);
+  --top-unsaved-color: var(--subtext0);
+  --top-loading-color: var(--overlay1);
+
+  --panel-background-color: var(--background-secondary-alt);
+  --panel-border-color: var(--background-secondary-alt);
+
+  --bhs-background-color: var(--background-secondary-alt);
+  --bhs-border-color: var(--background-secondary);
+
+  --modal-color: var(--text-normal);
+  --modal-background-color: var(--background-secondary-alt);
+  --modal-border-color: var(--background-secondary);
+  --modal-header-label-color: var(--ui-accent-color);
+  --modal-help-background-color: var(--background-secondary);
+  --modal-help-color: var(--subtext0);
+  --modal-selected-option-background-color: var(--ui-accent-color);
+  --modal-selected-option-color: var(--background-secondary-alt);
+  --modal-hint-background-color: var(--ui-accent-color);
+  --modal-hint-color: var(--background-secondary-alt);
+  --modal-description-color: inherit;
+
+  --notifications-background-color: inherit;
+  --notifications-border-color: var(--surface0);
+  --notification-info-background-color: color-mix(
+    in srgb,
+    var(--blue),
+    #fff 80%
+  );
+  --notification-error-background-color: color-mix(
+    in srgb,
+    var(--red),
+    #fff 80%
+  );
+
+  --button-background-color: var(--subtext0);
+  --button-hover-background-color: var(--overlay1);
+  --button-color: var(--text-white);
+  --button-border-color: var(--subtext0);
+
+  --primary-button-background-color: var(--ui-accent-color);
+  --primary-button-hover-background-color: var(--ui-accent-color);
+  --primary-button-color: var(--ui-accent-contrast-color);
+  --primary-button-border-color: var(--ui-accent-color);
+
+  --text-field-background-color: var(--background-primary-alt);
+
+  --action-button-background-color: transparent;
+  --action-button-color: var(--subtext0);
+  --action-button-hover-color: var(--blue);
+  --action-button-active-color: var(--blue);
+
+  --editor-caret-color: var(--text-normal);
+  --editor-selection-background-color: color-mix(
+    in srgb,
+    var(--ui-accent-color),
+    transparent 80%
+  );
+  --editor-panels-bottom-color: var(--subtext0);
+  --editor-panels-bottom-background-color: var(--background-secondary);
+  --editor-panels-bottom-border-color: var(--background-secondary);
+  --editor-completion-detail-color: var(--subtext0);
+  --editor-completion-detail-selected-color: var(--background-secondary-alt);
+  --editor-list-bullet-color: var(--text-normal);
+  --editor-heading-color: var(--text-title-h1);
+  --editor-heading-meta-color: var(--meta-subtle-color);
+  --editor-hashtag-background-color: var(--blue);
+  --editor-hashtag-color: var(--text-white);
+  --editor-hashtag-border-color: var(--blue);
+  --editor-ruler-color: var(--background-primary-alt);
+  --editor-code-color: var(--text-normal);
+  --editor-naked-url-color: var(--link-color);
+  --editor-link-color: var(--link-color);
+  --editor-link-url-color: var(--link-color);
+  --editor-wiki-link-page-color: var(--text-a);
+  --editor-wiki-link-page-background-color: transparent;
+  --editor-wiki-link-page-missing-color: var(--link-missing-color);
+  --editor-link-meta-color: var(--meta-subtle-color);
+  --editor-named-anchor-color: var(--meta-subtle-color);
+  --editor-command-button-color: inherit;
+  --editor-command-button-background-color: var(--background-secondary);
+  --editor-command-button-hover-background-color: inherit;
+  --editor-command-button-meta-color: var(--meta-subtle-color);
+  --editor-command-button-border-color: var(--background-primary);
+  --editor-line-meta-color: var(--meta-subtle-color);
+  --editor-meta-color: var(--meta-color);
+  --editor-table-head-background-color: var(--background-secondary);
+  --editor-table-head-color: var(--blue);
+  --editor-table-even-background-color: rgba(0, 0, 0, 0.1);
+  --editor-blockquote-background-color: transparent;
+  --editor-blockquote-color: var(--subtle-color);
+  --editor-blockquote-border-color: var(--text-normal);
+  --editor-struct-color: var(--red);
+  --editor-highlight-background-color: var(--highlight-color);
+  --editor-code-background-color: var(--background-primary-alt);
+  --editor-code-comment-color: var(--subtext0);
+  --editor-code-variable-color: var(--green);
+  --editor-code-typename-color: var(--yellow);
+  --editor-code-string-color: var(--yellow);
+  --editor-code-number-color: var(--text-white);
+  --editor-code-operator-color: var(--magenta);
+  --editor-code-property-color: var(--blue);
+  --editor-code-info-color: var(--green);
+  --editor-code-atom-color: var(--blue);
+  --editor-frontmatter-background-color: var(--subtle-background-color);
+  --editor-frontmatter-color: var(--subtle-color);
+  --editor-frontmatter-marker-color: var(--magenta);
+  --editor-widget-background-color: var(--background-secondary-alt);
+  --editor-task-marker-color: var(--subtle-color);
+  --editor-task-state-color: var(--subtle-color);
+
+  --editor-directive-color: var(--text-normal);
+  --editor-directive-background-color: var(--subtle-background-color);
+
+  --ui-font: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --editor-font: "JetBrains Mono", ui-monospace, "Courier New", monospace;
+
+  --treeview-folder-background-color: transparent;
+  --treeview-folder-border-color: transparent;
+  --treeview-folder-color: var(--subtext0);
+  --treeview-page-background-color: transparent;
+  --treeview-page-border-color: transparent;
+  --treeview-page-color: var(--subtext0);
+  --treeview-current-page-background-color: var(--background-primary-alt);
+  --treeview-current-page-border-color: transparent;
+  --treeview-current-page-color: var(--subtext1);
+}
+
+html {
+  /* Font rendering */
+  font-variant-ligatures: discretionary-ligatures;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .sb-notifications {
+    color: var(--background-secondary-alt);
+  }
+
+  /* Highlight */
+  #sb-main .cm-editor .sb-highlight {
+    color: var(--background-secondary-alt);
+    background-color: color-mix(in srgb, var(--yellow), transparent 20%);
+    padding: 0px 5px;
+  }
+}
+
+/* Headings color */
+#sb-editor {
+  .sb-line-h1 > span {
+    color: var(--text-title-h1);
+  }
+  .sb-line-h2 {
+    color: var(--text-title-h2);
+  }
+  .sb-line-h3 {
+    color: var(--text-title-h3);
+  }
+  .sb-line-h4 {
+    color: var(--text-title-h4);
+  }
+  .sb-line-h5 {
+    color: var(--text-title-h5);
+  }
+  .sb-line-h6 {
+    color: var(--text-title-h6);
+  }
+  .sb-line-blockquote {
+    text-indent: unset !important;
+    font-style: italic;
+  }
+}
+
+/* Input fields */
+input,
+.cm-content,
+.sb-prompt,
+.sb-modal-box,
+.cm-panel {
+  color-scheme: dark;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"],
+progress {
+  accent-color: var(--ui-accent-color);
+}
+
+#sb-main .cm-editor {
+  font-size: 14px;
+}
+
+.sb-button,
+.sb-button-primary,
+.sb-modal-box .sb-prompt .sb-mini-editor,
+#sb-main .cm-editor .sb-hashtag,
+#sb-main .cm-editor .hashtag {
+  border-radius: 3px;
+}
+
+#sb-top .main #sb-current-page .cm-content {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+#sb-top .panel {
+  margin-right: 0px;
+}
+
+#sb-editor .cm-scroller {
+  padding-left: 10px;
+}
+
+/* Modal */
+.sb-modal-box {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.85);
+}
+
+/* Search */
+.cm-search {
+  font-size: 16px;
+  * {
+    margin: 0.3em 0.6em 0.3em 0 !important;
+  }
+  .cm-textfield {
+    border-color: var(--editor-panels-bottom-color);
+    background-color: var(--background-secondary);
+    color: var(--editor-panels-bottom-color);
+    padding: 0.75em 0.5em;
+    border-radius: 3px;
+  }
+  .cm-textfield:focus {
+    border-color: var(--blue);
+    border-width: 1px;
+    box-shadow: unset;
+  }
+  .cm-button {
+    background-image: unset;
+    border-color: var(--editor-panels-bottom-color);
+    background-color: var(--background-secondary);
+    color: var(--editor-panels-bottom-color);
+    padding: 0.75em 1em;
+    cursor: pointer;
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+  .cm-button:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+  [aria-label="close"] {
+    font-size: 24px !important;
+    color: var(--top-color);
+    cursor: pointer;
+  }
+  [aria-label="close"]:hover {
+    color: var(--ui-accent-color);
+  }
+}
+
+.sb-admonition[admonition="note"] {
+  --admonition-color: var(--text-link);
+}
+
+.sb-admonition[admonition="warning"] {
+  --admonition-color: var(--red);
+}
+
+/* Treeview float menu */
+#sb-top .panel {
+  display: none;
+}
+#sb-main {
+  position: relative;
+
+  .sb-panel:nth-of-type(1) {
+    position: absolute;
+    display: block;
+    height: 100%;
+    z-index: 99;
+    resize: horizontal;
+    overflow: auto;
+    min-width: 200px;
+    width: 290px;
+    max-width: 400px;
+    background-color: var(--background-secondary);
+  }
+}
+
+.treeview-root {
+  height: 100% !important;
+  background-color: var(--background-secondary);
+  border-right: var(--top-border-color) 1px solid;
+
+  .tree__label > span {
+    font-family: var(--ui-font);
+    font-size: 14px !important;
+    font-weight: 400;
+
+    &:hover {
+      color: var(--ui-accent-color) !important;
+    }
+  }
+
+  .tree__label > span[data-current-page="true"] {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .treeview-header {
+    background-color: var(--background-secondary);
+
+    .treeview-actions {
+      background-color: var(--background-secondary);
+      border: unset;
+    }
+  }
+
+  #treeview-tree .tree__node .tree__subnodes:has(> .tree__node):before {
+    content: "";
+    background-color: var(--surface1);
+    position: absolute;
+    top: 33px;
+    left: -13px;
+    height: calc(100% - 40px);
+    width: 1px;
+  }
+
+  .tree__collapse {
+    color: var(--surface1);
+  }
+}
+
+/* Markdown preview window */
+.sb-preview {
+  font-family: var(--ui-font);
+
+  & tt {
+    font-family: var(--editor-font);
+  }
+}
+
+/* Print preview window */
+@media print {
+  .sb-preview input {
+    color-scheme: light;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="range"],
+  progress {
+    accent-color: unset;
+  }
+}
+
+/* Switch theme alert */
+html[data-theme="dark"] #sb-top {
+  flex-direction: column;
+}
+
+html[data-theme="dark"] #sb-top::after {
+  content: "This theme only supports light mode. Please switch back.";
+  background-color: var(--blue);
+  color: var(--text-normal);
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 1rem 0rem;
+}
