@@ -168,8 +168,8 @@ html {
   --editor-caret-color: var(--text-normal);
   --editor-selection-background-color: color-mix(
     in srgb,
-    var(--ui-accent-color),
-    transparent 80%
+    var(--background-primary-alt),
+    transparent 35%
   );
   --editor-panels-bottom-color: var(--subtext0);
   --editor-panels-bottom-background-color: var(--background-secondary);
@@ -207,7 +207,11 @@ html {
   --editor-blockquote-border-color: var(--text-normal);
   --editor-struct-color: var(--red);
   --editor-highlight-background-color: var(--highlight-color);
-  --editor-code-background-color: var(--background-primary-alt);
+  --editor-code-background-color: color-mix(
+    in srgb,
+    var(--background-primary-alt),
+    transparent 80%
+  );
   --editor-code-comment-color: var(--subtext0);
   --editor-code-variable-color: var(--green);
   --editor-code-typename-color: var(--yellow);
