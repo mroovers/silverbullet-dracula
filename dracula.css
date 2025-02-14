@@ -417,6 +417,7 @@ progress {
     font-family: var(--ui-font);
     font-size: 14px !important;
     font-weight: 400;
+    color: var(--subtext1);
 
     &:hover {
       color: var(--ui-accent-color) !important;
@@ -449,6 +450,7 @@ progress {
 
   .tree__collapse {
     color: var(--surface1);
+    height: calc(var(--st-collapse-icon-height) - 5px);
   }
 }
 
