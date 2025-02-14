@@ -92,7 +92,7 @@ html {
   --surface0: #313244;
   --surface1: #45475a;
 
-  --root-background-color: var(--background-secondary-alt);
+  --root-background-color: var(--background-secondary);
   --root-color: var(--text-normal);
 
   --ui-accent-color: var(--blue);
@@ -263,8 +263,10 @@ html {
   }
 }
 
-/* Headings color */
+/* Editor colors */
 #sb-editor {
+  background-color: var(--background-secondary-alt);
+
   .sb-line-h1 > span {
     color: var(--text-title-h1);
   }
