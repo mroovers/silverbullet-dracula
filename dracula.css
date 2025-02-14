@@ -291,6 +291,42 @@ html {
   }
 }
 
+/* Task line indentation fix */
+#sb-main .cm-editor {
+  .sb-line-ul.sb-line-li-1 {
+    text-indent: -2ch;
+    padding-left: 3ch;
+    .sb-line-ul.sb-line-li-1 .cm-list-bullet::after {
+      left: 1.5ch;
+    }
+  }
+
+  .sb-line-ul.sb-line-li-1.sb-line-li-2 {
+    text-indent: -4ch;
+    padding-left: 6ch;
+  }
+
+  .sb-line-ul.sb-line-li-1.sb-line-task {
+    text-indent: -5ch;
+    padding-left: 3ch;
+
+    .cm-list-bullet::after {
+      visibility: hidden;
+    }
+  }
+
+  .sb-line-ul.sb-line-li-1.sb-line-li-2.sb-line-task {
+    text-indent: -7ch;
+    padding-left: 6ch;
+  }
+
+  .sb-checkbox > input[type="checkbox"] {
+    width: 2ch;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /* Input fields */
 input,
 .cm-content,
