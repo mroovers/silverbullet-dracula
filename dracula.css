@@ -187,7 +187,7 @@ html {
   --editor-naked-url-color: var(--link-color);
   --editor-link-color: var(--link-color);
   --editor-link-url-color: var(--link-color);
-  --editor-wiki-link-page-color: var(--text-a);
+  --editor-wiki-link-page-color: var(--link-color);
   --editor-wiki-link-page-background-color: transparent;
   --editor-wiki-link-page-missing-color: var(--link-missing-color);
   --editor-link-meta-color: var(--meta-subtle-color);
