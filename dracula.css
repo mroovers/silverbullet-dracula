@@ -92,13 +92,15 @@ html {
   --surface0: #313244;
   --surface1: #45475a;
 
+  --radius: 3px;
+
   --root-background-color: var(--background-secondary);
   --root-color: var(--text-normal);
 
   --ui-accent-color: var(--blue);
   --highlight-color: color-mix(in srgb, var(--yellow), transparent 80%);
   --link-color: var(--text-link);
-  --link-missing-color: var(--text-a);
+  --link-missing-color: var(--lightRed);
   --meta-color: inherit;
   --meta-subtle-color: var(--subtext0);
   --subtle-color: var(--subtext1);
@@ -187,7 +189,7 @@ html {
   --editor-naked-url-color: var(--link-color);
   --editor-link-color: var(--link-color);
   --editor-link-url-color: var(--link-color);
-  --editor-wiki-link-page-color: var(--text-a);
+  --editor-wiki-link-page-color: var(--link-color);
   --editor-wiki-link-page-background-color: transparent;
   --editor-wiki-link-page-missing-color: var(--link-missing-color);
   --editor-link-meta-color: var(--meta-subtle-color);
@@ -209,7 +211,7 @@ html {
   --editor-highlight-background-color: var(--highlight-color);
   --editor-code-background-color: color-mix(
     in srgb,
-    var(--background-primary-alt),
+    var(--overlay1),
     transparent 80%
   );
   --editor-code-comment-color: var(--subtext0);
@@ -289,6 +291,19 @@ html {
     text-indent: unset !important;
     font-style: italic;
   }
+  .sb-header-inside {
+    .sb-named-anchor {
+      color: inherit;
+    }
+  }
+}
+
+/* Wiki link indentation fix */
+#sb-main .cm-editor {
+  a.sb-wiki-link-page,
+  a.sb-wiki-link-page-missing {
+    padding: 0;
+  }
 }
 
 /* Task line indentation fix */
@@ -322,8 +337,14 @@ html {
 
   .sb-checkbox > input[type="checkbox"] {
     width: 2ch;
-    margin-left: 0;
-    margin-right: 0;
+    margin-inline: 0;
+  }
+
+  .sb-code {
+    background-color: var(--editor-code-background-color);
+    color: var(--markup-code);
+    padding-inline: 1px;
+    border-radius: var(--radius);
   }
 }
 
@@ -352,7 +373,7 @@ progress {
 .sb-modal-box .sb-prompt .sb-mini-editor,
 #sb-main .cm-editor .sb-hashtag,
 #sb-main .cm-editor .hashtag {
-  border-radius: 3px;
+  border-radius: var(--radius);
 }
 
 #sb-top .main #sb-current-page .cm-content {
@@ -384,7 +405,7 @@ progress {
     background-color: var(--background-secondary);
     color: var(--editor-panels-bottom-color);
     padding: 0.75em 0.5em;
-    border-radius: 3px;
+    border-radius: var(--radius);
   }
   .cm-textfield:focus {
     border-color: var(--blue);
@@ -398,7 +419,7 @@ progress {
     color: var(--editor-panels-bottom-color);
     padding: 0.75em 1em;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: var(--radius);
     text-transform: capitalize;
   }
   .cm-button:hover {
@@ -462,7 +483,7 @@ progress {
 
   .tree__label > span[data-current-page="true"] {
     width: 100%;
-    border-radius: 3px;
+    border-radius: var(--radius);
   }
 
   .treeview-header {
