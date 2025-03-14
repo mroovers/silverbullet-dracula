@@ -291,7 +291,12 @@ html {
     text-indent: unset !important;
     font-style: italic;
   }
-  .sb-header-inside {
+  .sb-line-h1,
+  .sb-line-h2,
+  .sb-line-h3,
+  .sb-line-h4,
+  .sb-line-h5,
+  .sb-line-h6 {
     .sb-named-anchor {
       color: inherit;
     }
